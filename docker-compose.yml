@@ -1,0 +1,36 @@
+services:
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: okanban-api
+    ports:
+      - 3000:3000
+    depends_on:
+      - database
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: okanban-client
+    ports:
+      - 4173:4173
+    depends_on:
+      - api
+
+  database:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.database
+    environment:
+      POSTGRES_USER: **
+      POSTGRES_PASSWORD: **
+      POSTGRES_DB: **
+    container_name: okanban-database
+    volumes:
+      - pg-okanban:/var/lib/postgresql/data
+
+volumes:
+  pg-okanban:

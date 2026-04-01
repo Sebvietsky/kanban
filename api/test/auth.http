@@ -1,0 +1,25 @@
+@BASE_URL=http://localhost:3000
+@TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJpYXQiOjE3NzI3MTcyNzQsImV4cCI6MTc3MjcyMDg3NH0.RSj1-4UOMA_l6OKSdZB8n7kBoTs0YVe6ykzv5ktjhDA
+
+
+### Register User
+POST {{BASE_URL}}/auth/register
+Content-Type: application/json
+
+{
+    "username": "lol",
+    "password": "lol"
+}
+### Login User
+POST {{BASE_URL}}/auth/login
+Content-Type: application/json
+
+{
+    "username": "lol",
+    "password": "lol"
+}
+
+### Get User Info
+GET {{BASE_URL}}/auth/me
+Authorization: Bearer {{TOKEN}}
+

@@ -1,0 +1,22 @@
+@BASE_URL=http://localhost:3000
+@TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE3NzI3MDE4NzEsImV4cCI6MTc3MjcwNTQ3MX0.USxrAwKDv8WMsldcGtfoRsj5Rg5Urts-virA8rRqa9U
+
+@TOKEN_ADMIN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE3NzI3MTY1NjksImV4cCI6MTc3MjcyMDE2OX0.arfMi37TlDZfsxdxlZ3xaaiW1K_SeiyLwBABB2F1UYw
+
+### LLM Prompt
+POST {{BASE_URL}}/prompt
+Content-Type: application/json
+Authorization: Bearer {{TOKEN_ADMIN}}
+
+{
+    "prompt": "Bonjour"
+}
+
+### Spell Check
+POST {{BASE_URL}}/spellcheck
+Content-Type: application/json
+Authorization: Bearer {{TOKEN_ADMIN}}
+
+{
+    "prompt": "Bonjours"
+}

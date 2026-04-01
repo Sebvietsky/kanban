@@ -1,0 +1,28 @@
+@TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJpYXQiOjE3NzI3MTcyNzQsImV4cCI6MTc3MjcyMDg3NH0.RSj1-4UOMA_l6OKSdZB8n7kBoTs0YVe6ykzv5ktjhDA
+
+### Update cards 
+PATCH http://localhost:3000/cards/5
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+    "position": 1,
+    "list_id": 1,
+    "color": "#111111",
+    "content": "Australia"
+}
+
+### GET cards 
+GET http://localhost:3000/cards/5
+Authorization: Bearer {{TOKEN}}
+
+### Update lists 
+PATCH http://localhost:3000/lists/1
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+    "position": 3,
+    "title": "A faire"
+} 
+
