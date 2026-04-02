@@ -8,7 +8,7 @@ Elle permet de créer, organiser et gérer des listes, des cartes et des tags vi
 ![Board](./assets/okanban-interface.png)
 
 ### Interaction (création / modification de carte)
-![Create Card](./assets/crud-okanban.gif)
+![Create Card](./assets/demonstration-okanban.gif)
 
 ### Authentification
 ![Login](./assets/okanban-register.png)
